@@ -14,13 +14,13 @@ export default function Page() {
   
     return (
       <main>
-        <h1>{category}</h1>
+        <h1 className="text-xl text-yellow-300">{category}</h1>
   
-        <ul>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
           {categorySpaceships.map(ship => (
-            <li key={ship.id}>
+            <li key={ship.id} className="border rounded-lg h-12 w-60">
               <Link
-                className="border-2 border-solid cursor-pointer text-base font-bold grid place-content-center min-h-[3rem]"
+                className="text-xl font-semibold block h-full w-full p-2 hover:text-gray-400 transition-colors"
                 href={`/spaceships/${ship.id}`}
               >
                 {ship.name}
