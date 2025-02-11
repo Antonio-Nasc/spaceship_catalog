@@ -17,8 +17,8 @@ export default function RootLayout({
 
           <nav className="flex gap-4">
             <Link href="/">Início</Link>
-            <Link href="/spaceship">Espaçonaves</Link>
-            <Link href="/category">Categorias</Link>
+            <Link href="/spaceships">Espaçonaves</Link>
+            <Link href="/categories">Categorias</Link>
           </nav>
         </header>
 
