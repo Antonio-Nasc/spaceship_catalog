@@ -14,43 +14,38 @@ export default function Page() {
 
     return (
         <main>
-          <h1>{ship.name}</h1>
+          <h1 className="text-xl text-yellow-300">{ship.name}</h1>
     
           <p>
-            <Image src={ship.imageUrl} alt={ship.name} width={768} height={432} />
+            <Image src={ship.imageUrl} alt={ship.name} width={250} height={200} />
           </p>
     
-          <p>
+          <p className="py-1">
             <strong>Modelo: </strong>
             {ship.model}
           </p>
     
-          <p>
+          <p className="py-1">
             <strong>Categoria: </strong>
             {ship.category}
           </p>
     
           <p>{ship.description}</p>
     
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginTop: '1rem'
-          }}>
-            <Link href="/spaceships" className="btn">Voltar para Espaçonaves</Link>
+          <div className="flex items-center justify-between mt-4">
+            <Link href="/spaceships" className="bg-background border-2 border-foreground rounded-lg cursor-pointer text-base font-bold grid place-content-center min-h-12 px-5 py-2.5 w-max min-w-[12rem] hover:text-gray-400 transition-colors">Voltar para Espaçonaves</Link>
     
-            <div style={{ display: 'flex', gap: '1rem' }}>
+            <div className="flex gap-4">
               <Link
                 href={`/spaceships/${+id - 1}`}
-                className="btn"
+                className="bg-background border-2 border-foreground rounded-lg cursor-pointer text-base font-bold grid place-content-center min-h-12 px-5 py-2.5 w-max min-w-[12rem] hover:text-gray-400 transition-colors"
                 style={{ display: +id === 1 ? 'none' : 'block' }}
               >
                 Anterior
               </Link>
               <Link
                 href={`/spaceships/${+id + 1}`}
-                className="btn"
+                className="bg-background border-2 border-foreground rounded-lg cursor-pointer text-base font-bold grid place-content-center min-h-12 px-5 py-2.5 w-max min-w-[12rem] hover:text-gray-400 transition-colors"
                 style={{ display: +id === spaceships.length ? 'none' : 'block' }}
               >
                 Próxima

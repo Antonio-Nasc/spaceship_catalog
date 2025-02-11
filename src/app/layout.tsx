@@ -22,7 +22,7 @@ export default function RootLayout({
           </nav>
         </header>
 
-        <main className="flex-1 flex justify-center">
+        <main className="flex-1 flex justify-center w-full max-w-4xl mx-auto">
           {children}
         </main>
       </body>
