@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 
 export default function RootLayout({
@@ -10,12 +11,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="h-screen flex flex-col">
-        <header className="flex justify-between items-center px-8 py-4">
+        <header className="flex justify-between items-center px-6 py-4 sm:px-8">
           <div>
-            <p className="text-xl font-bold">CATÁLOGO DE ESPAÇONAVES</p>
+            <Link className="text-xl font-bold" href={"/"}>CATÁLOGO DE ESPAÇONAVES</Link>
           </div>
 
-          <nav className="flex gap-4">
+          <nav className="sm:flex gap-4">
             <Link href="/">Início</Link>
             <Link href="/spaceships">Espaçonaves</Link>
             <Link href="/categories">Categorias</Link>
@@ -25,6 +26,10 @@ export default function RootLayout({
         <main className="flex-1 flex justify-center w-full max-w-4xl mx-auto">
           {children}
         </main>
+        <footer>
+          <Footer name="José Nascimento" email="joseeantonioo2000@gmail.com" linkedin="https://www.linkedin.com/in/jose-antonio-nascimento-957124211/"
+            github="https://github.com/Antonio-Nasc" />
+        </footer>
       </body>
     </html>
   );
